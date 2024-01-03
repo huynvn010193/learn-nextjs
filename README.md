@@ -5,3 +5,10 @@ Pre-rendering (NextJs): render sẵn file html ở phía server. Khi user load l
 Non pre-rendering (ReactJS): chỉ gửi về file trắng -> js bắt đầu gắn event
 Static side Generation: SSG: default NextJS:
 Server side rendering
+
+===
+Hàm getStaticProps :
+`- Ở phía server-side
+`- run lúc build-time
+`-> Lúc dev thì request 1 lần thì đã chạy - Lúc lên production thì chỉ chạy lúc build thôi
+`-> Dùng chung vs getServerSideProp thì sẽ báo lỗi.
