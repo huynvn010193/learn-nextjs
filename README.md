@@ -12,3 +12,7 @@ Hàm getStaticProps :
 `- run lúc build-time
 `-> Lúc dev thì request 1 lần thì đã chạy - Lúc lên production thì chỉ chạy lúc build thôi
 `-> Dùng chung vs getServerSideProp thì sẽ báo lỗi.
+
+Hàm getStaticPaths:
+`- paths: có bao nhiêu item -> gọi getStaticProps bấy nhiêu lần -> tạo ra bấy nhiêu html
+`-
