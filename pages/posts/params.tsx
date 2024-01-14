@@ -12,3 +12,11 @@ export default function ParamsPagePage(props: ParamsPageProps) {
     </div>
   );
 }
+
+export async function getServerSideProps() {
+  // fake slow query
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  return {
+    props: {},
+  };
+}

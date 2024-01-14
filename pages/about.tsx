@@ -13,8 +13,6 @@ export interface AboutPageProps {}
 export default function AboutPage(props: AboutPageProps) {
   const [postList, setPostList] = useState([]);
   const router = useRouter();
-
-  console.log("About query", router.query);
   const page = router.query?.page;
 
   // Chỉ chạy phía client
@@ -26,7 +24,6 @@ export default function AboutPage(props: AboutPageProps) {
       );
       const data = await response.json();
       setPostList(data.data);
-      console.log("page", page);
     })();
   }, [page]);
 
@@ -35,7 +32,7 @@ export default function AboutPage(props: AboutPageProps) {
       {
         pathname: "/about",
         query: {
-          page: Number(page) + 1,
+          page: Number(page || 0) + 1,
         },
       },
       undefined,
