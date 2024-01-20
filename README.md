@@ -13,6 +13,11 @@ Hàm getStaticProps :
 `-> Lúc dev thì request 1 lần thì đã chạy - Lúc lên production thì chỉ chạy lúc build thôi
 `-> Dùng chung vs getServerSideProp thì sẽ báo lỗi.
 
-Hàm getStaticPaths:
-`- paths: có bao nhiêu item -> gọi getStaticProps bấy nhiêu lần -> tạo ra bấy nhiêu html
+Hàm getStaticPaths: Dùng khi gọi phần id. (build nhiều sẽ hạn chế)
+`- paths: có bao nhiêu item -> gọi getStaticProps bấy nhiêu lần -> tạo ra bấy nhiêu html.
 `-
+
+Incremental Static Regeneration
+`- fallback: bloking: khi request 1 page chưa có thì sẽ tự tạo ra. -> Nhược điểm time khá là lâu
+`- fallback: true: render được trạng thái loading khi chưa có data.
+`- fallback: false: ko call mới.
