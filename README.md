@@ -21,3 +21,7 @@ Incremental Static Regeneration
 `- fallback: bloking: khi request 1 page chưa có thì sẽ tự tạo ra. -> Nhược điểm time khá là lâu
 `- fallback: true: render được trạng thái loading khi chưa có data.
 `- fallback: false: ko call mới.
+
+Phòng chóng CSRF attack -> senitize html -> Dompurify: giúp loại bỏ đi các loại thẻ nguy hiểm (thẻ script...)
+http-cookie only: Tức là ko dùng js get dc phần cookie này.
+NextJS có API Proxy -> dấu đi domain api server.
