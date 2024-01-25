@@ -1,6 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import httpProxy from "http-proxy";
+import Cookies from "cookies";
 
 // type Data = {
 //   name: string;
@@ -19,17 +20,32 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
-  // don't send cookies to API server
-  req.headers.cookie = "";
+  // TODO: Viết Promise khắc phục lỗi "this may result in stalled requests." Do Proxy Sever bắt phải có return
+  return new Promise((resolve) => {
+    // convert cookies to header Authorization
+    const cookies = new Cookies(req, res);
+    const accesstToken = cookies.get("access_token");
+    if (accesstToken) {
+      console.log("a", accesstToken);
+      req.headers.Authorization = `Bearer ${accesstToken}`;
+    }
+
+    // don't send cookies to API server
+    req.headers.cookie = "";
+
+    proxy.web(req, res, {
+      target: process.env.API_URL,
+      changeOrigin: true,
+      selfHandleResponse: false,
+    });
+
+    proxy.once("proxyRes", () => {
+      resolve(true);
+    });
+  });
 
   // /api/students
   // https://js-post-api.herokuapp.com/api/students
-
-  proxy.web(req, res, {
-    target: process.env.API_URL,
-    changeOrigin: true,
-    selfHandleResponse: false,
-  });
 
   // res.status(200).json({ name: "PATH - match on here" });
 }
