@@ -1,11 +1,33 @@
 import * as React from "react";
+import { authApi } from "@/api/index";
 
 export default function App() {
-  async function handleLoginClick() {}
+  async function handleLoginClick() {
+    try {
+      await authApi.login({
+        username: "test1",
+        password: "123123",
+      });
+    } catch (error) {
+      console.log("failed to login", error);
+    }
+  }
 
-  async function handleGetProfileClick() {}
+  async function handleGetProfileClick() {
+    try {
+      await authApi.getProfile();
+    } catch (error) {
+      console.log("failed to get profile", error);
+    }
+  }
 
-  async function handleLogoutClick() {}
+  async function handleLogoutClick() {
+    try {
+      await authApi.logout();
+    } catch (error) {
+      console.log("failed to logout", error);
+    }
+  }
 
   return (
     <div>
