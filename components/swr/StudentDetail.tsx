@@ -7,7 +7,20 @@ export interface StudentDetailProps {
 
 export function StudentDetail({ studentId }: StudentDetailProps) {
   const { data, error, mutate, isValidating } = useSWR(
-    `/students/${studentId}`
+    `/students/${studentId}`,
+    {
+      revalidateOnFocus: false,
+    }
   );
-  return <div>Name: {data?.name || "--"}</div>;
+
+  function handleMutateClick() {
+    mutate({ name: "easy frontend" }, false);
+  }
+
+  return (
+    <div>
+      Name: {data?.name || "--"}{" "}
+      <button onClick={handleMutateClick}>mutate</button>
+    </div>
+  );
 }
