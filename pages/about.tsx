@@ -3,6 +3,7 @@ import { AdminLayout, MainLayout } from "@/components/layout";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import { Box, Typography } from "@mui/material";
 
 // chỉ render bên phía client. ko render phía server.
 const Header = dynamic(() => import("@/components/common/header"), {
@@ -42,8 +43,10 @@ export default function AboutPage(props: AboutPageProps) {
   }
 
   return (
-    <div>
-      <h1>About Page</h1>
+    <Box>
+      <Typography variant='h3' component='h1' color='primary.main'>
+        About Page
+      </Typography>
       <Header />
 
       <ul className='post-list'>
@@ -53,7 +56,7 @@ export default function AboutPage(props: AboutPageProps) {
       </ul>
 
       <button onClick={handleNextClick}>Netx Page</button>
-    </div>
+    </Box>
   );
 }
 

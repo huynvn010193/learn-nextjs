@@ -25,3 +25,5 @@ Incremental Static Regeneration
 Phòng chóng CSRF attack -> senitize html -> Dompurify: giúp loại bỏ đi các loại thẻ nguy hiểm (thẻ script...)
 http-cookie only: Tức là ko dùng js get dc phần cookie này.
 NextJS có API Proxy -> dấu đi domain api server.
+
+@emotion/styled @emotion/server @emotion/react @mui/material @mui/icons-material
