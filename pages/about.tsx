@@ -3,7 +3,7 @@ import { AdminLayout, MainLayout } from "@/components/layout";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 
 // chỉ render bên phía client. ko render phía server.
 const Header = dynamic(() => import("@/components/common/header"), {
@@ -43,10 +43,15 @@ export default function AboutPage(props: AboutPageProps) {
   }
 
   return (
-    <Box>
+    <Box sx={{ bgcolor: "primary.light" }} color='text.primary'>
       <Typography variant='h3' component='h1' color='primary.main'>
         About Page
       </Typography>
+
+      <Button variant='contained' color='success' sx={{ p: 2 }}>
+        Testing
+      </Button>
+
       <Header />
 
       <ul className='post-list'>
