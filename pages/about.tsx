@@ -6,9 +6,9 @@ import React, { useEffect, useState } from "react";
 import { Box, Typography, Button } from "@mui/material";
 
 // chỉ render bên phía client. ko render phía server.
-const Header = dynamic(() => import("@/components/common/header"), {
-  ssr: false,
-});
+// const Header = dynamic(() => import("@/components/common/header"), {
+//   ssr: false,
+// });
 
 export interface AboutPageProps {}
 
@@ -52,7 +52,7 @@ export default function AboutPage(props: AboutPageProps) {
         Testing
       </Button>
 
-      <Header />
+      {/* <Header /> */}
 
       <ul className='post-list'>
         {postList.map((post: any) => (

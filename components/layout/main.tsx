@@ -1,6 +1,8 @@
 import { LayoutProps } from "@/models/index";
 import Link from "next/link";
 import React, { useEffect } from "react";
+import { Stack, Box } from "@mui/material";
+import { Header, Footer } from "../common";
 
 export function MainLayout({ children }: LayoutProps) {
   useEffect(() => {
@@ -9,11 +11,15 @@ export function MainLayout({ children }: LayoutProps) {
   }, []);
 
   return (
-    <div>
-      <h1>MainLayout</h1>
-      <Link href='/'>Home</Link>
-      <Link href='/about'>About</Link>
-      <div>{children}</div>
-    </div>
+    <Stack minHeight='100vh'>
+      <Header />
+      <Box component='main' flexGrow={1}>
+        <Link href='/'>Home</Link>
+        <Link href='/blog'>Blog</Link>
+        <Link href='/works'>Works</Link>
+        {children}
+      </Box>
+      <Footer />
+    </Stack>
   );
 }
