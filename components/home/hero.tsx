@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <Box component='section' pt={18} pb={9}>
       <Container>
-        <Stack direction='row' alignItems='flex-start' spacing={4}>
+        <Stack direction='row' alignItems='flex-start' spacing={8}>
           <Box>
             <Typography component='h1' variant='h3' fontWeight='bold' mb={5}>
               Hi, I am John,
