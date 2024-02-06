@@ -10,6 +10,7 @@ export const theme = createTheme({
       main: "#ff6464",
     },
     secondary: {
+      light: "#edf7fa",
       main: "#00a8cc",
     },
     error: {
@@ -48,6 +49,17 @@ export const theme = createTheme({
           },
         },
       },
+    },
+    // trường hợp button có variant là contained và color: primary thì color -> white.
+    MuiButton: {
+      variants: [
+        {
+          props: { variant: "contained", color: "primary" },
+          style: {
+            color: "white",
+          },
+        },
+      ],
     },
   },
 });
