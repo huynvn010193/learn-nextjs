@@ -1,23 +1,16 @@
 import * as React from "react";
-import {
-  Box,
-  Container,
-  Stack,
-  Typography,
-  Button,
-  Divider,
-} from "@mui/material";
+import { Box, Container, Stack, Typography, Button } from "@mui/material";
 import Image from "next/legacy/image";
 import avatar from "@/images/avatar.png";
 
-export default function HeroSection() {
+export function HeroSection() {
   return (
     <Box component="section" pt={{ xs: 4, md: 18 }} pb={{ xs: 7, md: 9 }}>
       <Container>
         <Stack
           direction={{ xs: "column-reverse", md: "row" }}
           alignItems={{ xs: "center", md: "flex-start" }}
-          textAlign={{ xs: "center", md: "flex" }}
+          textAlign={{ xs: "center", md: "left" }}
           spacing={8}
         >
           <Box>
