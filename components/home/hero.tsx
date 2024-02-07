@@ -5,11 +5,15 @@ import avatar from "@/images/avatar.png";
 
 export default function HeroSection() {
   return (
-    <Box component='section' pt={18} pb={9}>
+    <Box component="section" pt={{ xs: 4, md: 18 }} pb={{ xs: 7, md: 9 }}>
       <Container>
-        <Stack direction='row' alignItems='flex-start' spacing={8}>
+        <Stack
+          direction={{ xs: "column-reverse", md: "row" }}
+          alignItems="flex-start"
+          spacing={8}
+        >
           <Box>
-            <Typography component='h1' variant='h3' fontWeight='bold' mb={5}>
+            <Typography component="h1" variant="h3" fontWeight="bold" mb={5}>
               Hi, I am John,
               <br /> Creative Technologist
             </Typography>
@@ -18,7 +22,7 @@ export default function HeroSection() {
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet.
             </Typography>
-            <Button variant='contained' size='large'>
+            <Button variant="contained" size="large">
               Download Resume
             </Button>
           </Box>
@@ -31,7 +35,7 @@ export default function HeroSection() {
               borderRadius: "50%",
             }}
           >
-            <Image src={avatar} alt='avatar' layout='responsive' />
+            <Image src={avatar} alt="avatar" layout="responsive" />
           </Box>
         </Stack>
       </Container>
