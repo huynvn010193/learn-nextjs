@@ -21,11 +21,16 @@ export default function HeroSection() {
           spacing={8}
         >
           <Box>
-            <Typography component="h1" variant="h3" fontWeight="bold" mb={5}>
+            <Typography
+              component="h1"
+              variant="h3"
+              fontWeight="bold"
+              mb={{ xs: 3.5, md: 5 }}
+            >
               Hi, I am John,
               <br /> Creative Technologist
             </Typography>
-            <Typography mb={5}>
+            <Typography mb={{ xs: 3.5, md: 5 }}>
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet.
