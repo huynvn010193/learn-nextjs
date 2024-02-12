@@ -27,3 +27,10 @@ http-cookie only: Tức là ko dùng js get dc phần cookie này.
 NextJS có API Proxy -> dấu đi domain api server.
 
 @emotion/styled @emotion/server @emotion/react @mui/material @mui/icons-material
+
+https://unsplash.com/
+https://picsum.photos/images
+cloudinary
+
+Optimale image:
+https://squoosh.app/
