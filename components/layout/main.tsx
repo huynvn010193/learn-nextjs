@@ -1,4 +1,4 @@
-import { LayoutProps } from "@/models/index";
+import { LayoutProps } from "@/models";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import { Stack, Box, Container } from "@mui/material";
@@ -11,9 +11,9 @@ export function MainLayout({ children }: LayoutProps) {
   }, []);
 
   return (
-    <Stack minHeight='100vh'>
+    <Stack minHeight="100vh">
       <Header />
-      <Box component='main' flexGrow={1}>
+      <Box component="main" flexGrow={1}>
         {children}
       </Box>
       <Footer />

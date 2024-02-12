@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import { PostCard } from "./post-card";
-import { Post } from "@/models/index";
+import { Post } from "@/models";
 
 export function RecentPosts() {
   const postList: Post[] = [

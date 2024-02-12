@@ -13,21 +13,21 @@ import {
   documentGetInitialProps,
 } from "@mui/material-nextjs/v14-pagesRouter";
 import createEmotionServer from "@emotion/server/create-instance";
-import { createEmotionCache, theme } from "@/utils/index";
+import { createEmotionCache, theme } from "@/utils";
 
 export default function MyDocument(
   props: DocumentProps & DocumentHeadTagsProps
 ) {
   return (
-    <Html lang='en'>
+    <Html lang="en">
       <Head>
         {/* PWA primary color */}
-        <meta name='theme-color' content={theme.palette.primary.main} />
-        <link rel='shortcut icon' href='/favicon.ico' />
-        <meta name='emotion-insertion-point' content='' />
+        <meta name="theme-color" content={theme.palette.primary.main} />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <meta name="emotion-insertion-point" content="" />
         <link
-          href='https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap'
-          rel='stylesheet'
+          href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap"
+          rel="stylesheet"
         ></link>
         <DocumentHeadTags {...props} />
       </Head>

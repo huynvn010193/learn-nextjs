@@ -1,4 +1,4 @@
-import { LayoutProps } from "@/models/index";
+import { LayoutProps } from "@/models";
 import Link from "next/link";
 import * as React from "react";
 import Auth from "../common/auth";
@@ -27,8 +27,8 @@ export function AdminLayout({ children }: LayoutProps) {
       <div>
         <button onClick={handleLogoutClick}>Log out</button>
       </div>
-      <Link href='/'>Home</Link>
-      <Link href='/about'>About</Link>
+      <Link href="/">Home</Link>
+      <Link href="/about">About</Link>
       <div>{children}</div>
     </Auth>
   );
