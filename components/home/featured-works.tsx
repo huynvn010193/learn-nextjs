@@ -52,9 +52,11 @@ export function FeaturedWorks() {
     },
   ];
   return (
-    <Box component="section" pb={4} pt={2}>
+    <Box component='section' pb={4} pt={2}>
       <Container>
-        <Typography variant="h5">Featured Works</Typography>
+        <Typography variant='h5' mb={4}>
+          Featured Works
+        </Typography>
         <WorkList workList={workList} />
       </Container>
     </Box>
