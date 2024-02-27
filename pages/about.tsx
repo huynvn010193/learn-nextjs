@@ -1,6 +1,5 @@
 // import Header from "@/components/common/header";
 import { AdminLayout, MainLayout } from "@/components/layout";
-import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Box, Typography, Button } from "@mui/material";
@@ -43,18 +42,18 @@ export default function AboutPage(props: AboutPageProps) {
   }
 
   return (
-    <Box sx={{ bgcolor: "primary.light" }} color='text.primary'>
-      <Typography variant='h3' component='h1' color='primary.main'>
+    <Box sx={{ bgcolor: "primary.light" }} color="text.primary">
+      <Typography variant="h3" component="h1" color="primary.main">
         About Page
       </Typography>
 
-      <Button variant='contained' color='success' sx={{ p: 2 }}>
+      <Button variant="contained" color="success" sx={{ p: 2 }}>
         Testing
       </Button>
 
       {/* <Header /> */}
 
-      <ul className='post-list'>
+      <ul className="post-list">
         {postList.map((post: any) => (
           <li key={post.id}>{post.title}</li>
         ))}
