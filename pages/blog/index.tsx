@@ -28,11 +28,11 @@ export default function BlogListPage({ posts }: BlogListPageProps) {
 // Muốn return gì thì phải truyền vô : GetStaticProps<PostListPageProps>
 export const getStaticProps: GetStaticProps<BlogListPageProps> = async () => {
   // convert markdown to list of js object.
-  const data = await getPostList();
+  const postList = await getPostList();
 
   return {
     props: {
-      posts: data.map((x: any) => ({ id: x.id, title: x.title })),
+      posts: postList,
     },
   };
 };

@@ -15,6 +15,7 @@ export function RecentPosts() {
   const postList: Post[] = [
     {
       id: "1",
+      slug: "",
       title: "Making a design system from scratch",
       publishedDate: "1648363391671",
       tagList: ["Design", "Pattern"],
@@ -23,6 +24,7 @@ export function RecentPosts() {
     },
     {
       id: "2",
+      slug: "",
       title: "Creating pixel perfect icons in Figma",
       publishedDate: "1648363391671",
       tagList: ["Figma", "Icon design"],
@@ -31,16 +33,16 @@ export function RecentPosts() {
     },
   ];
   return (
-    <Box component="section" bgcolor="secondary.light" pb={4} pt={2}>
+    <Box component='section' bgcolor='secondary.light' pb={4} pt={2}>
       <Container>
         <Stack
-          direction="row"
+          direction='row'
           mb={2}
           justifyContent={{ xs: "center", md: "space-between" }}
-          alignItems="center"
+          alignItems='center'
         >
-          <Typography variant="h5">Recent Posts</Typography>
-          <Link href="/blog" passHref legacyBehavior>
+          <Typography variant='h5'>Recent Posts</Typography>
+          <Link href='/blog' passHref legacyBehavior>
             <MuiLink sx={{ display: { xs: "none", md: "inline-block" } }}>
               View All
             </MuiLink>
