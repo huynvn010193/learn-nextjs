@@ -1,3 +1,4 @@
+import { MainLayout } from "@/components/layout";
 import { getPostList } from "@/utils/posts";
 import { GetStaticProps, GetStaticPropsContext } from "next";
 import Link from "next/link";
@@ -24,6 +25,8 @@ export default function BlogListPage({ posts }: BlogListPageProps) {
     </div>
   );
 }
+
+BlogListPage.layout = MainLayout;
 
 // Muốn return gì thì phải truyền vô : GetStaticProps<PostListPageProps>
 export const getStaticProps: GetStaticProps<BlogListPageProps> = async () => {
