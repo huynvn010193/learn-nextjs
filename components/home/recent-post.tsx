@@ -17,7 +17,7 @@ export function RecentPosts() {
       id: "1",
       slug: "",
       title: "Making a design system from scratch",
-      publishedDate: "1648363391671",
+      publishedDate: "2022-06-18T10:00:00Z",
       tagList: ["Design", "Pattern"],
       description:
         "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
@@ -26,23 +26,23 @@ export function RecentPosts() {
       id: "2",
       slug: "",
       title: "Creating pixel perfect icons in Figma",
-      publishedDate: "1648363391671",
+      publishedDate: "2022-06-18T10:00:00Z",
       tagList: ["Figma", "Icon design"],
       description:
         "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
     },
   ];
   return (
-    <Box component='section' bgcolor='secondary.light' pb={4} pt={2}>
+    <Box component="section" bgcolor="secondary.light" pb={4} pt={2}>
       <Container>
         <Stack
-          direction='row'
+          direction="row"
           mb={2}
           justifyContent={{ xs: "center", md: "space-between" }}
-          alignItems='center'
+          alignItems="center"
         >
-          <Typography variant='h5'>Recent Posts</Typography>
-          <Link href='/blog' passHref legacyBehavior>
+          <Typography variant="h5">Recent Posts</Typography>
+          <Link href="/blog" passHref legacyBehavior>
             <MuiLink sx={{ display: { xs: "none", md: "inline-block" } }}>
               View All
             </MuiLink>

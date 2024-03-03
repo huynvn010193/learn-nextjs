@@ -1,5 +1,7 @@
+import PostItem from "@/components/blog/post-item";
 import { MainLayout } from "@/components/layout";
 import { getPostList } from "@/utils/posts";
+import { Box, Divider } from "@mui/material";
 import { GetStaticProps, GetStaticPropsContext } from "next";
 import Link from "next/link";
 import * as React from "react";
@@ -11,22 +13,25 @@ export interface BlogListPageProps {
 export default function BlogListPage({ posts }: BlogListPageProps) {
   console.log("posts", posts);
   return (
-    <div>
-      <h1>Bog List Page</h1>
-      <ul>
+    <Box>
+      <h1>Bog</h1>
+      <Box component="ul" sx={{ listStyleType: "none", p: 0 }}>
         {posts.map((post) => (
           <li key={post.id}>
-            <Link href={`/posts/${post.id}`} legacyBehavior>
-              <a>{post.title}</a>
+            <Link href={`/blog/${post.slug}`} legacyBehavior>
+              <a>
+                <PostItem post={post} />
+              </a>
             </Link>
+            <Divider sx={{ my: 3 }} />
           </li>
         ))}
-      </ul>
-    </div>
+      </Box>
+    </Box>
   );
 }
 
-BlogListPage.layout = MainLayout;
+BlogListPage.Layout = MainLayout;
 
 // Muốn return gì thì phải truyền vô : GetStaticProps<PostListPageProps>
 export const getStaticProps: GetStaticProps<BlogListPageProps> = async () => {
