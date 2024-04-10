@@ -1,5 +1,6 @@
 import PostItem from "@/components/blog/post-item";
 import { MainLayout } from "@/components/layout";
+import { Post } from "@/models";
 import { getPostList } from "@/utils/posts";
 import { Box, Divider, Container } from "@mui/material";
 import { GetStaticProps, GetStaticPropsContext } from "next";
@@ -7,7 +8,7 @@ import Link from "next/link";
 import * as React from "react";
 
 export interface BlogListPageProps {
-  posts: any[];
+  posts: Post[];
 }
 
 export default function BlogListPage({ posts }: BlogListPageProps) {
